@@ -32,13 +32,13 @@ class ST23ATestCaseAuto(unittest.TestCase):
         btnAdd.click()
         # Bước 2: Nhập tên = 'Hoang'
         txtFirstName = self.driver.find_element(By.XPATH, "//input[@id='firstName']")
-        txtFirstName.send_keys("Hoang")
+        txtFirstName.send_keys("Anh")
         # Bước 3: Nhập họ = 'Tran'
         txtLastName = self.driver.find_element(By.XPATH, "//input[@id='lastName']")
-        txtLastName.send_keys("Tran")
-        # Bước 4: Nhập Email = 'hoang104094@donga.edu.vn'
+        txtLastName.send_keys("Nguyen")
+        # Bước 4: Nhập Email = 'anh102064@donga.edu.vn'
         txtEmail = self.driver.find_element(By.ID, "userEmail")
-        txtEmail.send_keys("hoang104094@donga.edu.vn")
+        txtEmail.send_keys("anh102064@donga.edu.vn")
         # Bước 5: Nhập Tuổi = '20'
         txtAge = self.driver.find_element(By.CSS_SELECTOR, "#age")
         txtAge.send_keys("20")
@@ -52,7 +52,7 @@ class ST23ATestCaseAuto(unittest.TestCase):
         self.driver.find_element(By.ID, "submit").click()
         # Bước 9: Kiểm tra dữ liệu xuất hiện trên bảng
         table = self.driver.find_element(By.XPATH, "//div[@class='rt-table']")
-        assert "hoang104094@donga.edu.vn" in table.text, "Thêm dữ liệu thất bại!"
+        assert "anh102064@donga.edu.vn" in table.text, "Thêm dữ liệu thất bại!"
         return True
 
     def tearDown(self):
